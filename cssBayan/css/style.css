@@ -1,3 +1,61 @@
 body{
     background-color: bisque;
 }
+.wrapper{
+    margin-right: 20%;
+    margin-left: 20%;
+    position: static;
+}
+h1{
+    text-align: left;
+    position: static;
+}
+.wrapper-bayan .title-bayan{
+    color: blue;
+}
+.bayan-item{
+    border-top: 1px solid #e0dada;
+    padding-bottom: 20px;
+    padding-top: 10px;
+    position: static;
+    color: white;
+}
+.bayan-item:hover{
+    color: black;
+}
+.title-bayan{
+    font-size: 1.7rem;
+    font-weight: bolder;
+    position: static;
+    display: block;
+}
+
+.bayan-item:hover .img-bayan{
+    display: block;
+}
+.img-bayan{
+    display: none;
+    text-align: center;
+    margin: 0 auto;
+    position: static;
+    padding-top: 30px;
+}
+.input-bayan{
+    width: 0;
+    height: 0;
+}
+.input-bayan:hover ~ label {
+    color: black;
+}
+.input-bayan:active ~ label{
+    color: blue;
+}
+
+.input-bayan:checked ~ label{
+    color: black;
+
+}
+.input-bayan:checked ~ label>img{
+    display: block;
+}
+
