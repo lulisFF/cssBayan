@@ -39,6 +39,7 @@ h1{
     margin: 0 auto;
     position: static;
     padding-top: 30px;
+    max-width: 100%;
 }
 .input-bayan{
     width: 0;
@@ -47,15 +48,31 @@ h1{
 .input-bayan:hover ~ label {
     color: black;
 }
-.input-bayan:active ~ label{
+/*rotate svg icon*/
+.bayan-item:hover .icon-svg{
+    transform: rotate(90deg);
+    transition: 0.5s ease-out;
+}
+.input-bayan:active ~ label {
     color: blue;
 }
 
 .input-bayan:checked ~ label{
     color: black;
-
+}
+/*rotate and fixed svg icon*/
+.input-bayan:checked ~ label>.icon-svg{
+    transform: rotate(90deg);
 }
 .input-bayan:checked ~ label>img{
     display: block;
 }
 
+.title-bayan{
+    display: flex;
+    justify-content: space-between;
+}
+/*svg-icon*/
+.icon-svg{
+    width:16px;
+}
