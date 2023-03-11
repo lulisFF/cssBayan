@@ -39,11 +39,9 @@ body{
 }
 
 .img-bayan{
-    display: none;
-    text-align: center;
-    padding-top: 1rem;
-    max-width: 100%;
-    margin: 0 auto;
+    display: flex;
+    max-height: 0;
+    transition: max-height 1s;
 }
 
 .input-bayan{
@@ -54,22 +52,16 @@ body{
 
 .input-bayan:checked ~ label{
     color: black;
+
 }
 
-/*rotate and fixed svg icon*/
-.input-bayan:checked ~ label>.icon-svg{
-    transform: rotate(90deg);
-}
+
 
 .input-bayan:checked ~ label>.img-bayan{
-    display: block;
+    max-height: 100%;
 }
 
-/*svg-icon*/
-.icon-svg{
-    width:1rem;
-    opacity: 0;
-}
+
 
 /* Media mobile first */
 
@@ -102,6 +94,7 @@ body{
         font-size: 1.7rem;
     }
 
+
 }
 
 @media screen and (min-width: 1180px) {
@@ -127,6 +120,7 @@ body{
 }
 
 @media (hover: hover) and (pointer: fine) {
+
     .item-bayan:hover{
         color: black;
     }
@@ -134,11 +128,12 @@ body{
     .item-bayan{
         cursor: pointer;
     }
-
-    .item-bayan:hover .img-bayan{
-        display: block;
+    .img-bayan{
+        transition: all 1s ease-in;
     }
-
+    .item-bayan:hover .img-bayan:before{
+        transform: translate(0,-10rem);
+    }
     .wrapper-bayan:hover .icon-svg{
         opacity: 100%;
     }
@@ -152,6 +147,17 @@ body{
         opacity: 100%;
         transform: rotate(90deg);
         transition: 0.5s ease-out;
+    }
+    /*rotate and fixed svg icon*/
+    .input-bayan:checked ~ label>.icon-svg{
+        transform: rotate(90deg);
+    }
+
+    /*svg-icon*/
+    .icon-svg{
+        width:1rem;
+        opacity: 0;
+        transition-duration: 1s;
     }
 
 }
