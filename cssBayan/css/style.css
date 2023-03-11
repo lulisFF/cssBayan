@@ -8,6 +8,10 @@ body{
     position: static;
 }
 
+.wrapper h1{
+    font-weight: bold;
+}
+
 .wrapper-bayan .title-bayan{
     color: blue;
 }
@@ -70,13 +74,17 @@ body{
 /* Media mobile first */
 
 @media screen and (min-width: 320px) {
+
     .wrapper{
         margin-right: 10%;
         margin-left: 10%;
         position: static;
     }
-}
 
+    .title-bayan{
+        font-size: 1.7rem;
+    }
+}
 
 @media screen and (min-width: 820px) {
 
@@ -86,19 +94,45 @@ body{
         position: static;
     }
 
+    .wrapper h1{
+        font-size: 2.5rem;
+    }
+
+    .title-bayan{
+        font-size: 1.7rem;
+    }
+
 }
+
 @media screen and (min-width: 1180px) {
+
     .wrapper{
         margin-right: 20%;
         margin-left: 20%;
         position: static;
     }
-}
 
+    .wrapper h1{
+        font-size: 4rem;
+    }
+
+    .title-bayan{
+        font-size: 2.7rem;
+    }
+
+    .icon-svg{
+        width:2rem;
+        opacity: 0;
+    }
+}
 
 @media (hover: hover) and (pointer: fine) {
     .item-bayan:hover{
         color: black;
+    }
+
+    .item-bayan{
+        cursor: pointer;
     }
 
     .item-bayan:hover .img-bayan{
@@ -119,4 +153,5 @@ body{
         transform: rotate(90deg);
         transition: 0.5s ease-out;
     }
+
 }
