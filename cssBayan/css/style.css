@@ -5,11 +5,11 @@ body{
 .wrapper{
     margin-right: 5%;
     margin-left: 5%;
-    position: static;
 }
 
 .wrapper h1{
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .wrapper-bayan .title-bayan{
@@ -32,16 +32,21 @@ body{
 }
 
 .title-bayan{
-    font-size: 1.7rem;
-    font-weight: bolder;
     display: flex;
     justify-content: space-between;
+    font-size: 1rem;
+    font-weight: bolder;
 }
 
+label{
+    display: flex;
+    justify-content: center;
+}
 .img-bayan{
     display: flex;
     max-height: 0;
-    transition: max-height 1s;
+    transform-origin: top;
+    transition: 1s ease;
 }
 
 .input-bayan{
@@ -55,26 +60,33 @@ body{
 
 }
 
-
-
 .input-bayan:checked ~ label>.img-bayan{
-    max-height: 100%;
+    transition: max-height 4s ease ;
+    max-height: 100vh;
+}
+/*svg-icon*/
+.icon-svg{
+    width:1rem;
+    opacity: 0;
+    transition-duration: 0.5s;
 }
 
 
 
 /* Media mobile first */
 
-@media screen and (min-width: 320px) {
-
+@media screen and (min-width: 321px) {
     .wrapper{
         margin-right: 10%;
         margin-left: 10%;
-        position: static;
+    }
+
+    .wrapper h1{
+        font-size: 1.7rem;
     }
 
     .title-bayan{
-        font-size: 1.7rem;
+        font-size: 1.5rem;
     }
 }
 
@@ -106,11 +118,11 @@ body{
     }
 
     .wrapper h1{
-        font-size: 4rem;
+        font-size: 3rem;
     }
 
     .title-bayan{
-        font-size: 2.7rem;
+        font-size: 2.3rem;
     }
 
     .icon-svg{
@@ -128,11 +140,11 @@ body{
     .item-bayan{
         cursor: pointer;
     }
-    .img-bayan{
-        transition: all 1s ease-in;
-    }
-    .item-bayan:hover .img-bayan:before{
-        transform: translate(0,-10rem);
+    .item-bayan:hover .img-bayan{
+
+        max-height: 100vh;
+        transition: max-height 3s;
+
     }
     .wrapper-bayan:hover .icon-svg{
         opacity: 100%;
@@ -153,11 +165,5 @@ body{
         transform: rotate(90deg);
     }
 
-    /*svg-icon*/
-    .icon-svg{
-        width:1rem;
-        opacity: 0;
-        transition-duration: 1s;
-    }
 
 }
