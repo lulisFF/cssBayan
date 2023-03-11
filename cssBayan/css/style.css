@@ -1,6 +1,7 @@
 body{
     background-color: bisque;
 }
+
 .wrapper{
     margin-right: 20%;
     margin-left: 20%;
@@ -53,6 +54,12 @@ h1{
     transform: rotate(90deg);
     transition: 0.5s ease-out;
 }
+
+.bayan-item:active{
+    opacity: 50%;
+    background-color: rgba(255,228,196,0.5);
+}
+
 .input-bayan:active ~ label {
     color: blue;
 }
@@ -60,13 +67,16 @@ h1{
 .input-bayan:checked ~ label{
     color: black;
 }
+
 /*rotate and fixed svg icon*/
 .input-bayan:checked ~ label>.icon-svg{
     transform: rotate(90deg);
 }
+
 .input-bayan:checked ~ label>img{
     display: block;
 }
+
 /*svg-icon*/
 .icon-svg{
     width:16px;
