@@ -3,8 +3,8 @@ body{
 }
 
 .wrapper{
-    margin-right: 20%;
-    margin-left: 20%;
+    margin-right: 5%;
+    margin-left: 5%;
     position: static;
 }
 
@@ -12,13 +12,20 @@ body{
     color: blue;
 }
 
-.bayan-item{
+.item-bayan{
     border-top: 0.1rem solid #e0dada;
     padding-bottom: 1rem;
     position: static;
 }
 
+.item-bayan:active{
+    opacity: 50%;
+    background-color: rgba(255,228,196,0.5);
+}
 
+.item-bayan:active .title-bayan{
+    color: blue;
+}
 
 .title-bayan{
     font-size: 1.7rem;
@@ -26,8 +33,6 @@ body{
     display: flex;
     justify-content: space-between;
 }
-
-
 
 .img-bayan{
     display: none;
@@ -42,15 +47,6 @@ body{
     height: 0;
 }
 
-
-.bayan-item:active{
-    opacity: 50%;
-    background-color: rgba(255,228,196,0.5);
-}
-
-.input-bayan:active ~ label {
-    color: blue;
-}
 
 .input-bayan:checked ~ label{
     color: black;
@@ -68,25 +64,57 @@ body{
 /*svg-icon*/
 .icon-svg{
     width:1rem;
-    opacity: 0%;
+    opacity: 0;
 }
+
+/* Media mobile first */
+
+@media screen and (max-width: 320px) {
+    .wrapper{
+        margin-right: 10%;
+        margin-left: 10%;
+        position: static;
+    }
+}
+
+
+@media screen and (max-width: 820px) {
+
+    .wrapper{
+        margin-right: 15%;
+        margin-left: 15%;
+        position: static;
+    }
+
+}
+@media screen and (min-width: 1180px) {
+    .wrapper{
+        margin-right: 20%;
+        margin-left: 20%;
+        position: static;
+    }
+}
+
+
 @media (hover: hover) and (pointer: fine) {
-    .bayan-item:hover{
+    .item-bayan:hover{
         color: black;
     }
 
-    .bayan-item:hover .img-bayan{
+    .item-bayan:hover .img-bayan{
         display: block;
     }
+
     .wrapper-bayan:hover .icon-svg{
         opacity: 100%;
     }
+
     .input-bayan:hover ~ label {
         color: black;
     }
 
     /*rotate svg icon*/
-    .bayan-item:hover .icon-svg{
+    .item-bayan:hover .icon-svg{
         opacity: 100%;
         transform: rotate(90deg);
         transition: 0.5s ease-out;
