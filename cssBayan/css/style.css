@@ -18,9 +18,7 @@ body{
     position: static;
 }
 
-.bayan-item:hover{
-    color: black;
-}
+
 
 .title-bayan{
     font-size: 1.7rem;
@@ -29,9 +27,7 @@ body{
     justify-content: space-between;
 }
 
-.bayan-item:hover .img-bayan{
-    display: block;
-}
+
 
 .img-bayan{
     display: none;
@@ -46,14 +42,6 @@ body{
     height: 0;
 }
 
-.input-bayan:hover ~ label {
-    color: black;
-}
-/*rotate svg icon*/
-.bayan-item:hover .icon-svg{
-    transform: rotate(90deg);
-    transition: 0.5s ease-out;
-}
 
 .bayan-item:active{
     opacity: 50%;
@@ -80,4 +68,27 @@ body{
 /*svg-icon*/
 .icon-svg{
     width:1rem;
+    opacity: 0%;
+}
+@media (hover: hover) and (pointer: fine) {
+    .bayan-item:hover{
+        color: black;
+    }
+
+    .bayan-item:hover .img-bayan{
+        display: block;
+    }
+    .wrapper-bayan:hover .icon-svg{
+        opacity: 100%;
+    }
+    .input-bayan:hover ~ label {
+        color: black;
+    }
+
+    /*rotate svg icon*/
+    .bayan-item:hover .icon-svg{
+        opacity: 100%;
+        transform: rotate(90deg);
+        transition: 0.5s ease-out;
+    }
 }
