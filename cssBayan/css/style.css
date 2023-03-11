@@ -7,23 +7,21 @@ body{
     margin-left: 20%;
     position: static;
 }
-h1{
-    text-align: left;
-    position: static;
-}
+
 .wrapper-bayan .title-bayan{
     color: blue;
 }
+
 .bayan-item{
-    border-top: 1px solid #e0dada;
-    padding-bottom: 20px;
-    padding-top: 10px;
+    border-top: 0.1rem solid #e0dada;
+    padding-bottom: 1rem;
     position: static;
-    color: white;
 }
+
 .bayan-item:hover{
     color: black;
 }
+
 .title-bayan{
     font-size: 1.7rem;
     font-weight: bolder;
@@ -34,18 +32,20 @@ h1{
 .bayan-item:hover .img-bayan{
     display: block;
 }
+
 .img-bayan{
     display: none;
     text-align: center;
-    margin: 0 auto;
-    position: static;
-    padding-top: 30px;
+    padding-top: 1rem;
     max-width: 100%;
+    margin: 0 auto;
 }
+
 .input-bayan{
     width: 0;
     height: 0;
 }
+
 .input-bayan:hover ~ label {
     color: black;
 }
@@ -73,11 +73,11 @@ h1{
     transform: rotate(90deg);
 }
 
-.input-bayan:checked ~ label>img{
+.input-bayan:checked ~ label>.img-bayan{
     display: block;
 }
 
 /*svg-icon*/
 .icon-svg{
-    width:16px;
+    width:1rem;
 }
