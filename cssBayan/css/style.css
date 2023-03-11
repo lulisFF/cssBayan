@@ -26,8 +26,8 @@ h1{
 .title-bayan{
     font-size: 1.7rem;
     font-weight: bolder;
-    position: static;
-    display: block;
+    display: flex;
+    justify-content: space-between;
 }
 
 .bayan-item:hover .img-bayan{
@@ -66,11 +66,6 @@ h1{
 }
 .input-bayan:checked ~ label>img{
     display: block;
-}
-
-.title-bayan{
-    display: flex;
-    justify-content: space-between;
 }
 /*svg-icon*/
 .icon-svg{
